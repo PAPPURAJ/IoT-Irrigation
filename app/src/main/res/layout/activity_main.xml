@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:layout_margin="5dp">
+
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:id="@+id/fieldWaterPumpIv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pump_off" />
+
+        <TextView
+            android:id="@+id/fieldWaterPumpTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:text="Pump is off"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            android:textSize="30dp"
+
+            android:textStyle="bold"/>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="moisture1GraphClick"
+            android:orientation="vertical">
+            <ProgressBar
+                android:id="@+id/progress_bar1"
+                style="@style/CircularDeterminateProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                tools:progress="60"/>
+            <TextView
+                android:id="@+id/senPer1Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:text="0%"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="moisture2GraphClick"
+            android:orientation="vertical">
+            <ProgressBar
+                android:id="@+id/progress_bar2"
+                style="@style/CircularDeterminateProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                tools:progress="60" />
+            <TextView
+                android:id="@+id/senPer2Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:text="0%"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="moisture3GraphClick"
+            android:orientation="vertical">
+            <ProgressBar
+
+                android:id="@+id/progress_bar3"
+                style="@style/CircularDeterminateProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                tools:progress="60" />
+            <TextView
+                android:id="@+id/senPer3Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:text="0%"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="moisture4GraphClick"
+            android:orientation="vertical">
+            <ProgressBar
+                android:id="@+id/progress_bar4"
+                style="@style/CircularDeterminateProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                tools:progress="60" />
+            <TextView
+                android:id="@+id/senPer4Tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:text="0%"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/tankWaterPumpIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/pump_on" />
+
+        <TextView
+            android:id="@+id/tankWaterPumpTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:text="Pump is off"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            android:textSize="30dp"
+
+            android:textStyle="bold"/>
+
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/tankWaterLevelPb"
+            style="@style/CircularDeterminateProgressBar"
+            android:layout_width="120dp"
+            android:layout_gravity="center"
+            android:layout_height="120dp"
+            tools:progress="60" />
+
+        <TextView
+
+            android:id="@+id/tankWaterLevelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:text="0%"/>
+    </LinearLayout>
+
+
+</LinearLayout>
